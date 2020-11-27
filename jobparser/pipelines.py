@@ -51,7 +51,7 @@ class JobparserPipeline:
 
 
         collection.insert_one(vacancy)
-        return vacancy
+        return item
 
     def salary_processing_hh(self, salary):
         salary_min = None
