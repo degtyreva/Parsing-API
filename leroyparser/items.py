@@ -17,9 +17,9 @@ def change_photo_url(url):
 class LeroyparserItem(scrapy.Item):
     # define the fields for your item here like:
     _id = scrapy.Field()
-    name = scrapy.Field()
+    name = scrapy.Field(output_processor=TakeFirst())
     photos = scrapy.Field(input_processor=MapCompose(change_photo_url))
-    link = scrapy.Field()
-    price = scrapy.Field()
-    unit = scrapy.Field()
+    link = scrapy.Field(output_processor=TakeFirst())
+    price = scrapy.Field(output_processor=TakeFirst())
+    unit = scrapy.Field(output_processor=TakeFirst())
     # features = scrapy.Field()
