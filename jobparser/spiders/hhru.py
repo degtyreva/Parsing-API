@@ -5,7 +5,8 @@ from jobparser.items import JobparserItem
 class HhruSpider(scrapy.Spider):
     name = 'hhru'
     allowed_domains = ['hh.ru']
-    start_urls = ['https://kaliningrad.hh.ru/search/vacancy?clusters=true&area=2&enable_snippets=true&salary=&st=searchVacancy&text=Python&from=suggest_post']
+    start_urls = ['https://kaliningrad.hh.ru/search/vacancy?clusters=true&area=2 \
+    &enable_snippets=true&salary=&st=searchVacancy&text=Python&from=suggest_post']
 
     def parse(self, response:HtmlResponse):
         vacancies_links = response.xpath("//span/a[contains(@class, 'bloko-link')]/@href").extract()
