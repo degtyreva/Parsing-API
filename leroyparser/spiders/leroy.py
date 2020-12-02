@@ -30,6 +30,8 @@ class LeroySpider(scrapy.Spider):
         loader.add_value('link', response.url)
         loader.add_xpath('price', "//uc-pdp-price-view[@class='primary-price']//span[@slot='price']/text()")
         loader.add_xpath('unit', "//uc-pdp-price-view[@class='primary-price']//span[@slot='unit']/text()")
-
+        loader.add_xpath('char_name', "//dt[@class='def-list__term']/text()")
+        loader.add_xpath('char_value', "//dd[@class='def-list__definition']/text()")
+        loader.add_value('characteristics', {})
         yield loader.load_item()
 
