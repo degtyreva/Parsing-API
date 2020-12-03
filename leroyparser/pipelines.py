@@ -30,7 +30,7 @@ class OTPhotosPipeline(ImagesPipeline):
                     yield scrapy.Request(img)
                 except Exception as e:
                     print(e)
-        return item
+        #return item
 
     def item_completed(self, results, item, info):
         if results:
