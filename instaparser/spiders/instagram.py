@@ -20,7 +20,7 @@ class InstagramSpider(scrapy.Spider):
     parse_user = ['bigdata_and_ai', 'bigdata.msu']     #Пользователь, у которого собираем подписчиков и подписки. Можно указать список
 
     graphql_url = 'https://www.instagram.com/graphql/query/?'
-    # posts_hash = 'eddbde960fed6bde675388aac39a3657'     #hash для получения данных по постах с главной страницы
+    # posts_hash = ''     #hash для получения данных по постах с главной страницы
     followers_hash = 'c76146de99bb02f6415203be841dd25a'     #hash для получения данных подписчиков
     following_hash = 'd04b0a864b4b54837c0d870b0e77e076'     #hash для получения данных подписок
 
