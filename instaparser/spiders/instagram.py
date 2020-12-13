@@ -14,8 +14,8 @@ class InstagramSpider(scrapy.Spider):
     name = 'instagram'
     allowed_domains = ['instagram.com']
     start_urls = ['https://instagram.com/']
-    insta_login = 'oksfaley'
-    insta_pwd = '#PWD_INSTAGRAM_BROWSER:10:1607327243:AXZQAGMDWxSQB4seUDBbgFAz4eJUmMsS27oziE8J5yRVGRdhJ1cxZFHsVSG2PtjAMAgK8loeIkytVRbcvYjhzKCiBXq08i7/0YS2rfYv0xyUl8ZcE75E5M2vIpCV+WdxET08kVO23vYzbQ=='
+    insta_login = ' '
+    insta_pwd = '#PWD_INSTAGRAM_BROWSER:10:'
     inst_login_link = 'https://www.instagram.com/accounts/login/ajax/'
     parse_user = ['bigdata_and_ai', 'bigdata.msu']     #Пользователь, у которого собираем подписчиков и подписки. Можно указать список
 
