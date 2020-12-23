@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Posts list:</h2>
+
+<table border="1">
+    <tr><th>Имя Пользователя</th><th>Тема</th><th>Пост</th></tr>
+    {% for post in posts %}
+<!--    <tr><td>{{ post.userId.name }}</td><td>{{ post.title }}</td><td>{{ post.body }}</td></tr>-->
+    <tr><td>{{ post.userId.first_name }}</td><td>{{ post.title }}</td><td>{{ post.body }}</td></tr>
+
+
+    {% endfor %}
+</table>
+
+</body>
+</html>
